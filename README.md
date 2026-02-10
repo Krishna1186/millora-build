@@ -1,47 +1,57 @@
-# Millora Connect
+# Millora: Manufacturing at Speed
 
-Millora Connect is a premier B2B online marketplace designed to bridge the gap between customers and manufacturers in the hardware prototyping industry.
+> **Connect. Quote. Build.**
+> An intelligent marketplace connecting hardware innovators with verified manufacturers.
 
-## Project Overview
+## The Problem
+Hardware development is often slowed down by communication friction. Engineers typically send emails to multiple machine shops, wait days for a reply, and manage sensitive files via scattered Dropbox links. This manual process leads to security risks and inconsistent quoting standards.
 
-This platform streamlines the complex process of sourcing hardware prototypes. It provides a seamless interface for customers to submit designs and for manufacturers to bid on projects, fostering a competitive and efficient marketplace.
+## The Solution
+Millora streamlines the parsing, quoting, and ordering process into a single unified platform.
+- **Instant Parsing**: Upload a CAD file to auto-extract dimensions and material specs.
+- **Standardized RFQs**: Vendors receive a clean, consistent spec sheet.
+- **Context-Aware Chat**: Discuss specific parts directly within the 3D viewer context.
 
-### Customer Journey
-1. **Submission**: Customers access their dashboard to upload CAD files for their projects.
-2. **Specification**: Users specify critical details such as desired materials, manufacturing methods (CNC, 3D Printing, etc.), and tolerance requirements.
-3. **Negotiation & Finalization**: Customers review bids from manufacturers, negotiate for the best offer, and finalize the contract.
+## Key Workflows
 
-### Manufacturer Journey
-1. **Project Discovery**: Manufacturers view a dashboard of visible projects matching their capabilities.
-2. **Bidding**: Manufacturers place bids specifying price and estimated delivery dates.
-3. **Execution**: Upon acceptance, manufacturers proceed with production.
+### Engineering Dashboard
+Manage multiple projects and track status from Draft to Shipped. This central view allows teams to monitor every stage of production without digging through email threads.
 
-## Tech Stack
+### Bidding Engine
+Manufacturers receive curated RFQs based on their capabilities. They can submit line-item bids including material setup, run time, and finishing costs.
 
-The project is built with professional-grade modern web technologies:
+### Secure Collaboration
+All communication is centralized. Discussions are linked to specific parts or orders, eliminating the confusion of lost emails.
 
-- **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Backend**: [Supabase](https://supabase.com/)
+---
 
-## Getting Started
+## System Architecture
 
-### Prerequisites
+We designed Millora for reliability and real-time interactivity.
 
-- Node.js (v18+)
-- npm
+**Frontend**
+Built with React (Vite) and TypeScript for type safety. The UI uses TailwindCSS and Shadcn UI to maintain professional design tokens.
 
-### Installation
+**Backend & Data**
+We use a relational PostgreSQL database with real-time subscriptions to handle live updates.
+
+👉 [**View Full Architecture Diagram**](docs/architecture.md)
+👉 [**Read Product Decision Log**](docs/product_decisions.md)
+
+## Local Development
 
 ```bash
-git clone <repository-url>
-cd millora-build
+# 1. Clone the repo
+git clone https://github.com/yourusername/millora-build.git
+
+# 2. Install dependencies
 npm install
+
+# 3. Start the dev server
 npm run dev
 ```
 
-## Contributing
-
-We welcome contributions to improve the marketplace. Please submit a PR for review.
+## Future Roadmap
+- **AI Quoting**: Auto-suggest prices based on geometry analysis.
+- **Supply Chain Analytics**: Dashboard for teams to track spend.
+- **Mobile Support**: App for shop-floor status updates.
